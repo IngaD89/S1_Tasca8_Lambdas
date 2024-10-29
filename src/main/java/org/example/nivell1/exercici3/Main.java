@@ -6,6 +6,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        noneReferenceForEach();
+    }
+
+    public static void noneReferenceForEach(){
         List<String> months = new ArrayList<>();
         months.add("Enero");
         months.add("Febrero");
@@ -21,6 +25,5 @@ public class Main {
         months.add("Diciembre");
 
         months.forEach(mes -> System.out.println(mes));
-
     }
 }

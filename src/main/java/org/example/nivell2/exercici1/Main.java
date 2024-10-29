@@ -5,6 +5,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        getNamesWithAAndThreeLetters();
+    }
+
+    public static void getNamesWithAAndThreeLetters(){
         List<String> names = new ArrayList<>();
         names.add("Ana");
         names.add("Inga");

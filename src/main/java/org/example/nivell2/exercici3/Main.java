@@ -11,15 +11,16 @@ public class Main {
             switch (operator) {
                 case "+" -> result = number1 + number2;
                 case "-" -> result = number1 - number2;
-                case "*" -> result = number1 * number1;
+                case "*" -> result = number1 * number2;
                 case "/" -> {
                     if (number1 == 0 || number2 == 0) {
-                        System.out.println("ERROR: no se puede dividir entre cero");
+                        //System.out.println("ERROR: no se puede dividir entre cero");
+                        throw new ArithmeticException("ERROR: no se puede dividir entre cero");
                     }
                     result = number1 / number2;
                 }
                 default -> System.out.println("Esto es una calculadora primitiva " +
-                        "solo puede hacer siguientes operaciones:  +, -, *, /");
+                        "solo puedes hacer siguientes operaciones:  +, -, *, /");
             }
             return result;
         });
@@ -27,7 +28,13 @@ public class Main {
         float addition = mathOperation.operation(5,6,"+");
         float subtraction = mathOperation.operation(10,4,"-");
         float multiplication = mathOperation.operation(3,4,"*");
-        float division = mathOperation.operation(9,3,"/");
+
+        float division = 0;
+        try{
+        division = mathOperation.operation(9,3,"/");
+        }catch (ArithmeticException e){
+            System.out.println(e.getMessage());
+        }
 
         System.out.println(addition);
         System.out.println(subtraction);

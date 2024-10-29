@@ -5,6 +5,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        containsOAndIsMoreThenFive();
+    }
+
+    public static void containsOAndIsMoreThenFive(){
         List<String> stringList = new ArrayList<>();
         stringList.add("HellOOO");
         stringList.add("Java");
